@@ -26,9 +26,9 @@ def pytest_addoption(parser):
 @pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):
 
-    # Настройка опций для режима инкогнито
-    # options = webdriver.ChromeOptions()
-    # options.add_argument('--incognito')
+    #Настройка опций для режима инкогнито
+    options = webdriver.ChromeOptions()
+    options.add_argument('--incognito')
 
     # Устанавливаем разрешение экрана
     browser.config.window_width = 1920
