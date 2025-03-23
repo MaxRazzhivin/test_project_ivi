@@ -10,16 +10,13 @@ from allure_commons.types import Severity
 @allure.tag("web")
 @allure.label("owner", "Max Razzhivin")
 @allure.feature("Проверяем тестовый функционал главной страницы")
-@allure.story("Пользователь может зайти авторизоваться")
+@allure.story("Пользователь может зайти авторизоваться, найти кино, добавить в избранное")
 @allure.link("https://www.ivi.ru/", "Ivi.ru main page")
 @allure.severity(Severity.CRITICAL)
 def test_ivi():
     with allure.step("Открываем главную страницу"):
         main_page = IviPage()
         main_page.open()
-
-    # with allure.step("Проверяем кнопку для подписки на 30 дней, что ее видно с корректным текстом и жмем на нее"):
-    #     main_page.free_subscribe_button()
 
     with allure.step("Авторизуемся как существующий пользователь через логин и пароль"):
         main_page.authorisation(email, password)

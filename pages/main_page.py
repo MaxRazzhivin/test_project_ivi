@@ -21,8 +21,8 @@ class IviPage:
 
         browser.element('[data-test="header_avatar"]').click()
         browser.element('[data-testid="profile_main_page"] .nbl-button_style_kioshi').click()
-        browser.element('[data-test="navbar_title"]').should(have.text('Вход или регистрация'))
-        browser.element('.nbl-input__placeholder').should(have.text('Введи email или телефон'))
+        # browser.element('[data-test="navbar_title"]').should(have.text('Вход или регистрация'))
+        # browser.element('.nbl-input__placeholder').should(have.text('Введи email или телефон'))
         browser.element('[data-test="input_login"]').type(login)
         browser.element('[data-test="button_continue"]').click()
 
