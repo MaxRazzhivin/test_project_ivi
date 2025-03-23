@@ -1,6 +1,5 @@
-import os
 from selene.support.shared import browser
-from selene import have, by, be, command
+from selene import have, by, be
 from tests.conftest import email
 
 
@@ -40,7 +39,8 @@ class IviPage:
 
         # Выходим в главное меню после авторизации по кнопке "Назад"
 
-        browser.element('.segmentedLanding__section_main .nbl-controlButton__caption').should(have.text('Назад')).click()
+        (browser.element('.segmentedLanding__section_main .nbl-controlButton__caption')
+         .should(have.text('Назад')).click())
 
     def successful_login(self):
 
@@ -60,8 +60,6 @@ class IviPage:
         # Возврат в главное меню
 
         browser.element('[data-test="header_logo"]').click()
-
-
 
     def search_movie(self, value):
 
@@ -85,14 +83,14 @@ class IviPage:
         browser.element('.profileMenu__list_tile .profileMenu__item:nth-child(4)').click()
 
         # Проверяем, что фильм присутствует в списке и добавлен корректно
-        browser.element('.profileGallery .gallerySection__list > li:nth-child(1)').should(have.exact_text(value)).click()
+        (browser.element('.profileGallery .gallerySection__list > li:nth-child(1)').should
+         (have.exact_text(value)).click())
 
         # Убираем его из списка избранного "буду смотреть"
         browser.element('[data-test="favorite_button"]').click()
 
         # Возвращаемся на главную страницу
         IviPage.return_to_main_page(self)
-
 
     def logout(self):
 

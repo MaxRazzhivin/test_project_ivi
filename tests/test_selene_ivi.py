@@ -1,20 +1,18 @@
-from selene.support.shared import browser
-
 from pages.main_page import IviPage
 import allure
 
 from tests.conftest import email, password
 
 
-# from allure_commons.types import Severity
+from allure_commons.types import Severity
 
 
-# @allure.tag("web")
-# @allure.label("owner", "Max Razzhivin")
-# @allure.feature("Проверяем тестовый функционал главной страницы")
-# @allure.story("Пользователь может зайти авторизоваться")
-# @allure.link("https://www.ivi.ru/", "Ivi.ru main page")
-# @allure.severity(Severity.CRITICAL)
+@allure.tag("web")
+@allure.label("owner", "Max Razzhivin")
+@allure.feature("Проверяем тестовый функционал главной страницы")
+@allure.story("Пользователь может зайти авторизоваться")
+@allure.link("https://www.ivi.ru/", "Ivi.ru main page")
+@allure.severity(Severity.CRITICAL)
 def test_ivi():
     with allure.step("Открываем главную страницу"):
         main_page = IviPage()
