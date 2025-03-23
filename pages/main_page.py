@@ -1,22 +1,12 @@
 import os
 from selene.support.shared import browser
 from selene import have, by, be, command
-
 from tests.conftest import email
 
 
-class OpenMainPage:
+class IviPage:
     def open(self):
         browser.open('https://www.ivi.ru/')
-
-        # # Удаляем рекламу
-        # browser.driver.execute_script("$('#RightSide_Advertisement').remove()")
-        # browser.driver.execute_script("$('#fixedban').remove()")
-        # browser.driver.execute_script("$('footer').remove()")
-
-    # def scroll_page(self):
-    #     browser.execute_script('window.scrollBy(0, 400);')
-    #     return self
 
     def free_subscribe_button(self):
 
@@ -71,86 +61,43 @@ class OpenMainPage:
 
         browser.element('[data-test="header_logo"]').click()
 
+
+
+    def search_movie(self, value):
+
+        # Поиск фильма и переход на его страницу, добавление в список "буду смотреть"
+        # и проверка, что добавлен - затем убираем из списка и выходим на главное меню
+
+        # Нажимаем на инпут "Поиск"
+        browser.element('[data-test="header_search"]').click()
+
+        # Вводим название фильма (для тех, которые есть на ivi.ru) и переходим на страницу кино
+        browser.element('[data-test="search_input"]').type(value)
+        browser.element('.searchResultItem').click()
+
+        # Добавляем фильм в избранное (список "буду смотреть")
+        browser.element('[data-test="favorite_button"]').click()
+
+        # Заходим на личную страницу профиля - проверяем, что фильм добавился к нам
+        IviPage.successful_login(self)
+
+        # Заходим в список "буду смотреть" внутри личного кабинета
+        browser.element('.profileMenu__list_tile .profileMenu__item:nth-child(4)').click()
+
+        # Проверяем, что фильм присутствует в списке и добавлен корректно
+        browser.element('.profileGallery .gallerySection__list > li:nth-child(1)').should(have.exact_text(value)).click()
+
+        # Убираем его из списка избранного "буду смотреть"
+        browser.element('[data-test="favorite_button"]').click()
+
+        # Возвращаемся на главную страницу
+        IviPage.return_to_main_page(self)
+
+
     def logout(self):
 
         # Заходим в меню пользователя и далее выход из аккаунта
 
-        OpenMainPage.successful_login(self)
+        IviPage.successful_login(self)
         browser.element('.profileMain__footer').element(by.text("Выйти")).click()
         browser.element('.confirmLogout').element(by.text("Выйти")).click()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # def fill_first_name(self):
-    #     browser.element('.segmentedLanding__section_main + .segmentedLanding__sticky_visible').click()
-    #
-    # def fill_last_name(self, value):
-    #     browser.element('#lastName').type(value)
-    #
-    # def fill_email(self, value):
-    #     browser.element('#userEmail').type(value)
-    #
-    # def fill_gender(self, value):
-    #     browser.all('[name=gender]').element_by(have.value(value)).element("..").click()
-    #
-    # def fill_user_number(self, value):
-    #     browser.element('#userNumber').type(value)
-    #
-    # def fill_date_of_birth(self, year, month, day):
-    #     browser.element('#dateOfBirthInput').click()
-    #     browser.element('.react-datepicker__month-select').type(month)
-    #     browser.element('.react-datepicker__year-select').type(year)
-    #     browser.element(f'.react-datepicker__day--0{day}').click()
-    #
-    # def fill_subjects(self, value):
-    #     browser.element('#subjectsInput').type(value).press_tab()
-    #
-    # def fill_hobbies(self, value1, value2):
-    #     browser.all('.custom-checkbox').element_by(have.exact_text(value1)).click()
-    #     browser.all('.custom-checkbox').element_by(have.exact_text(value2)).click()
-    #
-    # def fill_image(self, path):
-    #     browser.element("#uploadPicture").send_keys(
-    #         os.path.abspath(os.path.join(os.path.dirname(__file__), f"../resources/{path}")))
-    #
-    # def fill_address(self, value):
-    #     browser.element('#currentAddress').click().type(value)
-    #
-    # def fill_state(self, value):
-    #     browser.element('#state').click().element(by.text(value)).click()
-    #
-    # def fill_city(self, value):
-    #     browser.element('#city').click().element(by.text(value)).click()
-    #
-    # def should_registered_user_with(self, full_name, email, gender, mobile, date_of_birth, subject, hobbies, image_name, address,
-    #                                 state_city):
-    #     browser.element(".table").all('td').even.should(
-    #         have.exact_texts(
-    #             full_name,
-    #             email,
-    #             gender,
-    #             mobile,
-    #             date_of_birth,
-    #             subject,
-    #             hobbies,
-    #             image_name,
-    #             address,
-    #             state_city,
-    #     ))
-    #
-    # def button_close_should_be_clickable(self):
-    #     browser.element('#closeLargeModal').should(be.clickable)
-    #
-    # def submit(self):
-    #     browser.element('#submit').perform(command.js.click)
