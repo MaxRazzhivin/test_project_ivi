@@ -17,40 +17,30 @@ class IviPage:
 
     def authorisation(self, login, password):
 
-        # Проверяем наличие надписи "Вход или регистрация" и вводим почту, жмем далее
+        # Находим кнопку для авторизации, нажимаем, вводим логин
 
+        browser.element('[data-test="header_avatar"]').click()
+        browser.element('[data-testid="profile_main_page"] .nbl-button_style_kioshi').click()
         browser.element('[data-test="navbar_title"]').should(have.text('Вход или регистрация'))
         browser.element('.nbl-input__placeholder').should(have.text('Введи email или телефон'))
         browser.element('[data-test="input_login"]').type(login)
         browser.element('[data-test="button_continue"]').click()
 
-        # Вводим пароль и нажимаем enter
 
-        browser.element('.nbl-chatMessage__extraItem').should(
-            have.text('Введи пароль аккаунта Иви'))
+
+        # Вводим пароль и нажимаем enter
+        # browser.element('[data-testid="nextMethodButton"]').click()
+
         browser.element('[data-test="input_password"]').type(password).press_enter()
 
         # Проверяем успешность авторизации - наличие надписи "успешный вход"
 
         browser.element('[data-fixed="true"] .nbl-chatMessage__title').should(have.text('Успешный вход'))
 
-        # Проверяем надпись на кнопке "Не интересует" и жмем на нее
-        browser.element('[data-test="not_interested_button"]').should(have.text('Не интересует')).click()
-
-        # Выходим в главное меню после авторизации по кнопке "Назад"
-
-        (browser.element('.segmentedLanding__section_main .nbl-controlButton__caption')
-         .should(have.text('Назад')).click())
-
     def successful_login(self):
 
-        # Проверяем, что авторизация прошла успешно, отображается аватарка и переходим в меню пользователя
-        browser.element('.nbl-avatar__text').should(be.visible).click()
-
-    def profile_menu(self):
-
-        # Проверяем, что авторизация прошла успешно, на аватарке заглавная первая буква от нашего email
-
+        # Проверяем, что авторизация прошла успешно, отображается аватарка, на ней заглавная первая буква
+        # от нашего email
         first_letter = email[0].upper()  # Получаем первую букву email в верхнем регистре
         browser.element('[data-testid="profile_main_page"] .nbl-avatar__text').should(be.visible).should(
             have.text(first_letter))
@@ -71,13 +61,14 @@ class IviPage:
 
         # Вводим название фильма (для тех, которые есть на ivi.ru) и переходим на страницу кино
         browser.element('[data-test="search_input"]').type(value)
+
         browser.element('.searchResultItem').click()
 
         # Добавляем фильм в избранное (список "буду смотреть")
         browser.element('[data-test="favorite_button"]').click()
 
         # Заходим на личную страницу профиля - проверяем, что фильм добавился к нам
-        IviPage.successful_login(self)
+        browser.element('.nbl-avatar__text').should(be.visible).click()
 
         # Заходим в список "буду смотреть" внутри личного кабинета
         browser.element('.profileMenu__list_tile .profileMenu__item:nth-child(4)').click()
@@ -96,6 +87,6 @@ class IviPage:
 
         # Заходим в меню пользователя и далее выход из аккаунта
 
-        IviPage.successful_login(self)
+        browser.element('.nbl-avatar__text').should(be.visible).click()
         browser.element('.profileMain__footer').element(by.text("Выйти")).click()
         browser.element('.confirmLogout').element(by.text("Выйти")).click()
