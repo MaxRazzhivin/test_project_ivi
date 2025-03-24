@@ -3,9 +3,20 @@ from selene import have, by, be
 from tests.conftest import email
 
 
-class IviPage:
-    def open(self):
-        browser.open('https://www.ivi.ru/')
+def open_page():
+    browser.open('https://www.ivi.ru/')
+
+def close_cookie():
+    # Закрываем мешающее сообщение про куки
+    browser.element('[data-test="accept-teaser-button"]').click()
+
+def return_to_main_page():
+
+    # Возврат в главное меню
+
+    browser.element('[data-test="header_logo"]').click()
+
+class Authorised:
 
     def free_subscribe_button(self):
 
@@ -23,10 +34,7 @@ class IviPage:
         browser.element('[data-testid="profile_main_page"] .nbl-button_style_kioshi').click()
         # browser.element('[data-test="navbar_title"]').should(have.text('Вход или регистрация'))
         # browser.element('.nbl-input__placeholder').should(have.text('Введи email или телефон'))
-        browser.element('[data-test="input_login"]').type(login)
-        browser.element('[data-test="button_continue"]').click()
-
-
+        browser.element('[data-test="input_login"]').type(login).press_enter()
 
         # Вводим пароль и нажимаем enter
         # browser.element('[data-testid="nextMethodButton"]').click()
@@ -45,24 +53,11 @@ class IviPage:
         browser.element('[data-testid="profile_main_page"] .nbl-avatar__text').should(be.visible).should(
             have.text(first_letter))
 
-    def return_to_main_page(self):
 
-        # Возврат в главное меню
-
-        browser.element('[data-test="header_logo"]').click()
-
-    def search_movie(self, value):
+    def add_to_favourite(self,value):
 
         # Поиск фильма и переход на его страницу, добавление в список "буду смотреть"
         # и проверка, что добавлен - затем убираем из списка и выходим на главное меню
-
-        # Нажимаем на инпут "Поиск"
-        browser.element('[data-test="header_search"]').click()
-
-        # Вводим название фильма (для тех, которые есть на ivi.ru) и переходим на страницу кино
-        browser.element('[data-test="search_input"]').type(value)
-
-        browser.element('.searchResultItem').click()
 
         # Добавляем фильм в избранное (список "буду смотреть")
         browser.element('[data-test="favorite_button"]').click()
@@ -81,7 +76,8 @@ class IviPage:
         browser.element('[data-test="favorite_button"]').click()
 
         # Возвращаемся на главную страницу
-        IviPage.return_to_main_page(self)
+        return_to_main_page()
+
 
     def logout(self):
 
@@ -90,3 +86,24 @@ class IviPage:
         browser.element('.nbl-avatar__text').should(be.visible).click()
         browser.element('.profileMain__footer').element(by.text("Выйти")).click()
         browser.element('.confirmLogout').element(by.text("Выйти")).click()
+
+
+class NotAuthorised:
+    def main_sections_are_visible(self):
+        browser.element('#headerTop').should(have.text('Мой Иви'))
+        browser.element('#headerTop').should(have.text('Фильмы'))
+        browser.element('#headerTop').should(have.text('Сериалы'))
+        browser.element('#headerTop').should(have.text('Мультфильмы'))
+
+
+    def search_movie(self, value):
+
+        open_page()
+
+        # Нажимаем на инпут "Поиск"
+        browser.element('[data-test="header_search"]').click()
+
+        # Вводим название фильма (для тех, которые есть на ivi.ru) и переходим на страницу кино
+        browser.element('[data-test="search_input"]').type(value)
+
+        browser.element('.searchResultItem').click()
