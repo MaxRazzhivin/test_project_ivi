@@ -16,6 +16,7 @@ def return_to_main_page():
 
     browser.element('[data-test="header_logo"]').click()
 
+
 class Authorised:
 
     def free_subscribe_button(self):
@@ -36,7 +37,7 @@ class Authorised:
         # browser.element('.nbl-input__placeholder').should(have.text('Введи email или телефон'))
         browser.element('[data-test="input_login"]').type(login).press_enter()
 
-        # Вводим пароль и нажимаем enter
+        #Вводим пароль и нажимаем enter
         # browser.element('[data-testid="nextMethodButton"]').click()
 
         browser.element('[data-test="input_password"]').type(password).press_enter()
@@ -94,6 +95,35 @@ class NotAuthorised:
         browser.element('#headerTop').should(have.text('Фильмы'))
         browser.element('#headerTop').should(have.text('Сериалы'))
         browser.element('#headerTop').should(have.text('Мультфильмы'))
+
+    def links_to_main_directions(self):
+        open_page()
+
+        # Переходим на вкладку "Мой иви"
+        browser.element('[data-test="menu_section_my_ivi"]').click()
+
+        # Закрываем popup окно, если оно отображается
+
+        # if browser.element('[data-test="promoBlock"]').should(be.visible):
+        browser.element('.fullscreen-popup__scroll-wrapper .nbl-controlButton').click()
+        # else:
+        #     pass
+
+        # Переходим на вкладку "Фильмы"
+
+        browser.element('[data-test="menu_section_films"]').click()
+
+        # Переходим на вкладку "Сериалы"
+
+        browser.element('[data-test="menu_section_menu_serials"]').click()
+
+        # Переходим на вкладку "Мультфильмы"
+
+        browser.element('[data-test="menu_section_kids"]').click()
+
+        # Возвращаемся на главное меню
+
+        return_to_main_page()
 
 
     def search_movie(self, value):

@@ -9,22 +9,39 @@ from allure_commons.types import Severity
 
 
 
+# @allure.tag("web")
+# @allure.label("owner", "Max Razzhivin")
+# @allure.feature("Здесь мы проверяем основные разделы главной страницы")
+# @allure.story("При входе мы видим главные разделы сайта - 'Мой иви', 'Фильмы',"
+#               " 'Сериалы', 'Мультфильмы'")
+# @allure.link("https://www.ivi.ru/", "Ivi.ru main page")
+# @allure.severity(Severity.CRITICAL)
+# def test_main_page():
+#     no_login=NotAuthorised()
+#     with allure.step("Открываем главную страницу"):
+#         open_page()
+#     with allure.step("Закрываем нижнюю плашку про cookie"):
+#         close_cookie()
+#     with allure.step("Проверяем, что присутствуют основные разделы сайта"
+#                      "Мой иви, Фильмы, Сериалы, Мультфильмы"):
+#         no_login.main_sections_are_visible()
+
+
 @allure.tag("web")
 @allure.label("owner", "Max Razzhivin")
-@allure.feature("Здесь мы проверяем основные разделы главной страницы")
-@allure.story("При входе мы видим главные разделы сайта - 'Мой иви', 'Фильмы',"
-              " 'Сериалы', 'Мультфильмы'")
+@allure.feature("Здесь проверяем основные разделы главной страницы - что по ним можно перейти")
+@allure.story("При входе на главную страницу мы можем перейти на другие разделы сайта "
+              "- 'Мой иви', 'Фильмы', 'Сериалы', 'Мультфильмы'")
 @allure.link("https://www.ivi.ru/", "Ivi.ru main page")
 @allure.severity(Severity.CRITICAL)
-def test_main_page():
+def test_links_of_main_directions():
     no_login=NotAuthorised()
     with allure.step("Открываем главную страницу"):
         open_page()
-    with allure.step("Закрываем нижнюю плашку про cookie"):
-        close_cookie()
-    with allure.step("Проверяем, что присутствуют основные разделы сайта"
-                     "Мой иви, Фильмы, Сериалы, Мультфильмы"):
-        no_login.main_sections_are_visible()
+    with allure.step("Проверяем переходы по разделам - Мой иви, фильмы, сериалы и мультфильмы"):
+        no_login.links_to_main_directions()
+
+
 
 
 
