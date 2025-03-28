@@ -1,5 +1,5 @@
-# Ivi.tv
-![Company logo](images/ivi%20logo%202.png)
+# Ivi.tv 
+![Company logo](images/ivi%20logo%203.png)
 
 ![main page screenshot](images/main%20screen.png)
 
@@ -16,8 +16,8 @@
 <code><img src="images/StackIcons/pycharm.png" width="40" height="40" alt="PyCharm" title="PyCharm"></code>
 <code><img src="images/StackIcons/pytest.png" width="40" height="40"  alt="PyTest" title="PyTest"></code>
 <code><img src="images/StackIcons/selene.png" width="40" height="40"  alt="Selene" title="Selene"></code>
-<code><img src="images/StackIcons/selene.png" width="40" height="40"  alt="Selene" title="Selene"></code>
-<code><img src="images/StackIcons/Selenoid.svg" width="40" height="40"  alt="Selenoid " title="Allure"></code>
+<code><img src="images/StackIcons/Allure.png" width="40" height="40"  alt="Allure" title="Allure"></code>
+<code><img src="images/StackIcons/selenoid.svg" width="40" height="40"  alt="Selenoid " title="Selenoid"></code>
 <code><img src="images/StackIcons/Jenkins.svg" width="40" height="40"  alt="Jenkins " title="Jenkins"></code>
 <code><img src="images/StackIcons/Telegram.svg" width="50" height="40" alt="Telegram"  title="Telegram"></code>
 <br>
