@@ -1,6 +1,4 @@
-# Ivi.tv 
-![Company logo](images/ivi%20logo%203.png)
-
+# Ivi.tv <img src="images/images/ivi%20logo%203.png">
 ![main page screenshot](images/main%20screen.png)
 
 ## Description:
@@ -9,15 +7,15 @@
 - Настроен запуск тестов "одной кнопкой" с любого компьютера со стабильным интернетом. Установка ПО не требуется.
 - Визуальный отчет о прохождении тестов. Отчет может сформировать любой сотрудник: оценить тестовое покрытие и/или передать разработчикам информацию о проблеме.
 - После выполнения каждого теста записывается видео и скриншот экрана.
-- Уведомление о результатах тестов в <b>Telegramm</b> группу.
+- Уведомление о результатах тестов в <b>Telegram</b> группу.
 
 ## Stack:
 <code><img src="images/StackIcons/python.svg" width="40" height="40" alt="Python"  title="Python" /></code>
 <code><img src="images/StackIcons/pycharm.png" width="40" height="40" alt="PyCharm" title="PyCharm"></code>
 <code><img src="images/StackIcons/pytest.png" width="40" height="40"  alt="PyTest" title="PyTest"></code>
 <code><img src="images/StackIcons/selene.png" width="40" height="40"  alt="Selene" title="Selene"></code>
-<code><img src="images/StackIcons/Allure.png" width="40" height="40"  alt="Allure" title="Allure"></code>
-<code><img src="images/StackIcons/selenoid.svg" width="40" height="40"  alt="Selenoid " title="Selenoid"></code>
+<code><img src="images/StackIcons/Allure.svg" width="40" height="40"  alt="Allure" title="Allure"></code>
+<code><img src="images/StackIcons/selenoid.png" width="40" height="40"  alt="Selenoid " title="Selenoid"></code>
 <code><img src="images/StackIcons/Jenkins.svg" width="40" height="40"  alt="Jenkins " title="Jenkins"></code>
 <code><img src="images/StackIcons/Telegram.svg" width="50" height="40" alt="Telegram"  title="Telegram"></code>
 <br>
