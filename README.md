@@ -1,5 +1,5 @@
 # Ivi.tv
-![Company logo](images/ivi%20logo.png)
+![Company logo](images/ivi%20logo%202.png)
 
 ![main page screenshot](images/main%20screen.png)
 
