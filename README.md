@@ -1,4 +1,4 @@
-# Ivi.tv <img src="images/images/ivi%20logo%203.png">
+# Ivi.tv
 ![main page screenshot](images/main%20screen.png)
 
 ## Description:
