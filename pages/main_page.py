@@ -38,7 +38,7 @@ class Authorised:
         browser.element('[data-test="input_login"]').type(login).press_enter()
 
         #Вводим пароль и нажимаем enter
-        # browser.element('[data-testid="nextMethodButton"]').click()
+        browser.element('[data-testid="nextMethodButton"]').click()
 
         browser.element('[data-test="input_password"]').type(password).press_enter()
 
