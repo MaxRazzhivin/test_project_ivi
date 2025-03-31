@@ -65,7 +65,7 @@
 <details>
    <summary>Скриншоты</summary>
 
-###### Главный экран (Owerwiev)
+###### Главный экран (Overview)
 ![Screen Allure1](images/allure-main-screen.png)
 ###### Страница со списком тестов (Graph)
 ![Screen Allure2](images/allure-graphs.png)
