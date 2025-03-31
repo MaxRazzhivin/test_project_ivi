@@ -38,7 +38,7 @@ class Authorised:
         browser.element('[data-test="input_login"]').type(login).press_enter()
 
         #Вводим пароль и нажимаем enter
-        browser.element('[data-testid="nextMethodButton"]').click()
+        # browser.element('[data-testid="nextMethodButton"]').click()
 
         browser.element('[data-test="input_password"]').type(password).press_enter()
 
@@ -97,15 +97,14 @@ class NotAuthorised:
         browser.element('#headerTop').should(have.text('Мультфильмы'))
 
     def links_to_main_directions(self):
-        open_page()
 
         # Переходим на вкладку "Мой иви"
         browser.element('[data-test="menu_section_my_ivi"]').click()
 
         # Закрываем popup окно, если оно отображается
 
-        # if browser.element('[data-test="promoBlock"]').should(be.visible):
-        browser.element('.fullscreen-popup__scroll-wrapper .nbl-controlButton').click()
+        #if browser.element('[data-test="promoBlock"]').should(be.visible):
+        browser.element('.fullscreen-popup__scroll-wrapper .nbl-controlButton__caption').click()
         # else:
         #     pass
 
