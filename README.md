@@ -93,16 +93,11 @@
 
 ## Полная статистика хранится в Allure TestOps
 
-### Полная статистика хранится в Allure TestOps
 > [Ссылка на проект в AllureTestOps](https://allure.autotests.cloud/project/4695/dashboards)
 
 #### Дашборд с общими показателями тестовых прогонов
 
 ![This is an image](images/testops%20main%20screen.png)
-
-#### Дашборд с общими показателями тестовых прогонов
-
-![This is an image](images/allure-test-suites.png)
 
 #### Тест кейсы
 
