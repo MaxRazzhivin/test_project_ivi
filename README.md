@@ -81,7 +81,7 @@
 <p>Образец:</p>
 
 
-![Video test](images/video%20report.mp4)
+![Video test](images/video-report.gif)
 </details>
 
 ## Отчет в Telegram
