@@ -86,7 +86,7 @@
 
 ## Отчет в Telegram
 После завершения сборки специальный Telegram-бот отправляет сообщение с отчетом.
-Чтобы видеть его увидеть, вступите (временно) в группу `MaxNovo reports allure`
+Чтобы видеть его увидеть, вступите (временно) в канал `https://t.me/allure_reports_max`
 
 
-![Telegram](images/message-example.png)
+![Telegram](images/message_telegram.png)
