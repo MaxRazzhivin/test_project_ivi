@@ -99,6 +99,10 @@
 
 ![This is an image](images/testops%20main%20screen.png)
 
+#### История запуска тестовых наборов
+
+![This is an image](images/testops%20test%20runs.png)
+
 #### Тест кейсы
 
 ![This is an image](images/testops-test-suits.png)
