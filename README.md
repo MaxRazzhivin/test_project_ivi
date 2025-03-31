@@ -55,4 +55,38 @@
 
 > <p>Срок хранения сборки на сервере ~60 дней. Ссылка на Job может оказаться недоступной после 28.05.2025</p>
 
+<p>Образец:</p>
+
+<br>![Jenkins](images/jenkins-screen.png)
+
 </details>
+
+## Allure: пример отчета
+<details>
+   <summary>Скриншоты</summary>
+
+###### Главный экран (Owerwiev)
+![Screen Allure1](images/allure-main-screen.png)
+###### Страница со списком тестов (Graph)
+![Screen Allure2](images/allure-graphs.png)
+###### Пример описания теста
+![Screen Allure3](images/allure-test-suites.png)
+
+</details>
+
+## Видео тестов
+Видеозапись каждого теста генерируется с помощью `Selenoid`, после успешного запуска контейнера c тестами в `Docker`. 
+<details>
+<summary>Видеозапись</summary>
+<p>Образец:</p>
+
+
+![Video test](images/video%20report.mp4)
+</details>
+
+## Отчет в Telegram
+После завершения сборки специальный Telegram-бот отправляет сообщение с отчетом.
+Чтобы видеть его увидеть, вступите (временно) в группу `MaxNovo reports allure`
+
+
+![Telegram](images/message-example.png)
