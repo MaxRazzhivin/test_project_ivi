@@ -112,3 +112,9 @@
 ![This is an image](images/test_artefacts.png)
 
 ----
+
+### Интеграция с Jira
+
+> [Ссылка на проект в Jira](https://jira.autotests.cloud/browse/HOMEWORK-1430)
+
+![This is an image](images/jira%20screen.png)
