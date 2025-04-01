@@ -103,7 +103,7 @@ class NotAuthorised:
 
         # Закрываем popup окно, если оно отображается
 
-        #if browser.element('[data-test="promoBlock"]').should(be.visible):
+        # if browser.element('[data-test="promoBlock"]').should(be.visible):
         browser.element('.fullscreen-popup__scroll-wrapper .nbl-controlButton__caption').click()
         # else:
         #     pass
