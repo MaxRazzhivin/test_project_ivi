@@ -6,9 +6,11 @@ from tests.conftest import email
 def open_page():
     browser.open('https://www.ivi.ru/')
 
+
 def close_cookie():
     # Закрываем мешающее сообщение про куки
     browser.element('[data-test="accept-teaser-button"]').click()
+
 
 def return_to_main_page():
 
@@ -37,7 +39,7 @@ class Authorised:
         # browser.element('.nbl-input__placeholder').should(have.text('Введи email или телефон'))
         browser.element('[data-test="input_login"]').type(login).press_enter()
 
-        #Вводим пароль и нажимаем enter
+        # Вводим пароль и нажимаем enter
         # browser.element('[data-testid="nextMethodButton"]').click()
 
         browser.element('[data-test="input_password"]').type(password).press_enter()
@@ -54,8 +56,7 @@ class Authorised:
         browser.element('[data-testid="profile_main_page"] .nbl-avatar__text').should(be.visible).should(
             have.text(first_letter))
 
-
-    def add_to_favourite(self,value):
+    def add_to_favourite(self, value):
 
         # Поиск фильма и переход на его страницу, добавление в список "буду смотреть"
         # и проверка, что добавлен - затем убираем из списка и выходим на главное меню
@@ -78,7 +79,6 @@ class Authorised:
 
         # Возвращаемся на главную страницу
         return_to_main_page()
-
 
     def logout(self):
 
@@ -123,7 +123,6 @@ class NotAuthorised:
         # Возвращаемся на главное меню
 
         return_to_main_page()
-
 
     def search_movie(self, value):
 

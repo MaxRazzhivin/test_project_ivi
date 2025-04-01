@@ -1,12 +1,7 @@
 from pages.main_page import open_page, close_cookie, NotAuthorised, Authorised, return_to_main_page
 import allure
-
 from tests.conftest import email, password
-
-
 from allure_commons.types import Severity
-
-
 
 
 @allure.tag("web")
@@ -17,7 +12,7 @@ from allure_commons.types import Severity
 @allure.link("https://www.ivi.ru/", "Ivi.ru main page")
 @allure.severity(Severity.CRITICAL)
 def test_main_page():
-    no_login=NotAuthorised()
+    no_login = NotAuthorised()
     with allure.step("Открываем главную страницу"):
         open_page()
     with allure.step("Закрываем нижнюю плашку про cookie"):
@@ -35,14 +30,11 @@ def test_main_page():
 @allure.link("https://www.ivi.ru/", "Ivi.ru main page")
 @allure.severity(Severity.CRITICAL)
 def test_links_of_main_directions():
-    no_login=NotAuthorised()
+    no_login = NotAuthorised()
     with allure.step("Открываем главную страницу"):
         open_page()
     with allure.step("Проверяем переходы по разделам - Мой иви, фильмы, сериалы и мультфильмы"):
         no_login.links_to_main_directions()
-
-
-
 
 
 @allure.tag("web")
@@ -80,6 +72,7 @@ def test_search_movie():
         find_page = NotAuthorised()
         find_page.search_movie("Зимородок")
 
+
 @allure.tag("web")
 @allure.label("owner", "Max Razzhivin")
 @allure.feature("Проверяем добавление в избранное")
@@ -88,7 +81,7 @@ def test_search_movie():
 @allure.severity(Severity.NORMAL)
 def test_add_to_favourite():
     main_page = Authorised()
-    find_page=NotAuthorised()
+    find_page = NotAuthorised()
     with allure.step("Открываем главную страницу"):
         open_page()
 
@@ -107,5 +100,3 @@ def test_add_to_favourite():
 
     with allure.step('Выходим из аккаунта'):
         main_page.logout()
-
-
