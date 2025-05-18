@@ -17,6 +17,8 @@
 <code><img src="images/StackIcons/Allure.svg" width="40" height="40"  alt="Allure" title="Allure"></code>
 <code><img src="images/StackIcons/selenoid.png" width="40" height="40"  alt="Selenoid " title="Selenoid"></code>
 <code><img src="images/StackIcons/Jenkins.svg" width="40" height="40"  alt="Jenkins " title="Jenkins"></code>
+<code><img src="images/StackIcons/appium.png" width="40" height="40"  alt="Appium " title="Appium"></code>
+<code><img src="images/StackIcons/allure_testops.png" width="40" height="40"  alt="Testops " title="Testops"></code>
 <code><img src="images/StackIcons/Telegram.svg" width="50" height="40" alt="Telegram"  title="Telegram"></code>
 <br>
 - Язык: `Python`
