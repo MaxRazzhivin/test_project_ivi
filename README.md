@@ -1,5 +1,5 @@
 # Ivi.tv
-
+![main page screenshot](images/main%20screen.png)
 
 ## Description:
 В этом репозитории:
