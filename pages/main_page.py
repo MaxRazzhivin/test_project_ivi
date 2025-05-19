@@ -4,7 +4,7 @@ from tests.conftest import email
 
 
 def open_page():
-    browser.open('https://www.ivi.tv/')
+    browser.open('/')
 
 
 def close_cookie():

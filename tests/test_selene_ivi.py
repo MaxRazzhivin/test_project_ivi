@@ -9,7 +9,7 @@ from allure_commons.types import Severity
 @allure.feature("Здесь мы проверяем основные разделы главной страницы")
 @allure.story("При входе мы видим главные разделы сайта - 'Мой иви', 'Фильмы',"
               " 'Сериалы', 'Мультфильмы'")
-@allure.link("https://www.ivi.ru/", "Ivi.ru main page")
+@allure.link("https://www.ivi.tv/", "Ivi.tv main page")
 @allure.severity(Severity.CRITICAL)
 def test_main_page():
     no_login = NotAuthorised()
