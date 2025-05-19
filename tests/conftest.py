@@ -7,6 +7,17 @@ from utils import attach
 import os
 from dotenv import load_dotenv
 
+
+
+class Config(BaseSettings):
+    base_url: str = 'https://ivi.tv'
+    hold_driver_at_exit: bool = False
+    window_width: int = 1900
+    window_height: int = 1200
+    timeout: float = 3.0
+
+config = Config()
+
 load_dotenv()
 email = os.getenv('EMAIL')
 password = os.getenv('PASSWORD')
@@ -28,18 +39,18 @@ def pytest_addoption(parser):
 @pytest.fixture(scope='function', autouse=True)
 def setup_browser(request):
 
-    browser.config.base_url = os.getenv('base_url', 'https://ivi.tv')
+    browser.config.base_url = config.base_url
 
     #Настройка опций для режима инкогнито
     # options = webdriver.ChromeOptions()
     # options.add_argument('--incognito')
 
     # Устанавливаем разрешение экрана
-    browser.config.window_width = os.getenv('window_width', '1920')
-    browser.config.window_height = os.getenv('window_height', '1080')
+    browser.config.window_width = config.window_width
+    browser.config.window_height = config.window_height
 
     browser.config._wait_decorator = support._logging.wait_with(context=StepContext)
-    browser.config.timeout = float(os.getenv("timeout", '3.0'))
+    browser.config.timeout = config.timeout
 
 
     driver_options = webdriver.ChromeOptions()
