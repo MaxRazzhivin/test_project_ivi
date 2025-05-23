@@ -1,1 +1,0 @@
-{'level': 'SEVERE', 'message': "https://www.ivi.tv/ - Refused to execute script from 'https://www.tns-counter.ru/V13b****vitpc_ad/ru/UTF-8/tmsec=idsh_ivi-total/' because its MIME type ('image/gif') is not executable.", 'source': 'security', 'timestamp': 1743413825717}
