@@ -6,6 +6,8 @@ from appium import webdriver
 from selene import browser, support
 from dotenv import load_dotenv
 
+import config
+
 load_dotenv()
 email = os.getenv('EMAIL')
 password = os.getenv('PASSWORD')
@@ -21,7 +23,7 @@ desired_caps = {
     "udid": 'mnv4zxustsi7z9in',  # номер девайса из adb devices
 }
 
-remote_url = os.getenv('remote_url', 'http://127.0.0.1:4723')
+remote_url = config.remote_url
 
 
 @pytest.fixture(scope='function', autouse=True)
