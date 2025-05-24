@@ -74,6 +74,51 @@
 
 </details>
 
+----
+
+### Локальный запуск автотестов - если Jenkins не работает (скачать репозиторий)
+
+#### Для запуска web/UI автотестов выполнить в терминале:
+> [!NOTE]
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+poetry install
+pytest ./tests/web/
+```
+
+
+#### Для локального запуска mobile автотестов выполнить процедуру:
+
+####
+Установить appium - brew install appium
+Подсоединить телефон или подключить эмулятор телефона
+Проверить через команду adb devices (для Андроида), что система видит наш девайс
+Запустить Аппиум сервер - в терминале команда "appium"
+####
+
+#### Далее выполнить:
+> [!NOTE]
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+poetry install
+pytest ./tests/web/
+```
+
+#### Получение отчёта:
+```bash
+allure serve tests/web/allure-results
+allure serve tests/android/allure-results
+
+```
+
+----
+
+
+
 ## Allure: пример отчета
 <details>
    <summary>Скриншоты</summary>
