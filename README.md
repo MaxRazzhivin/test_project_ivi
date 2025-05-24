@@ -100,8 +100,8 @@
 </details>
 
 ### Видео прохождения mobile автотеста
-![autotest_gif](images/Firsttest-ezgif.com-crop (1).gif)
-![autotest_gif](images/Secondtest-ezgif.com-crop (3).gif)
+![autotest_gif](images/Firsttest-ezgif.com-crop.gif)
+![autotest_gif](images/Secondtest-ezgif.com-crop.gif)
 ![autotest_gif](images/3rdtest-ezgif.com-crop.gif)
 
 
