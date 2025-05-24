@@ -134,7 +134,6 @@ allure serve tests/android/allure-results
 
 ## Видео тестов
 Видеозапись каждого web-теста генерируется с помощью `Selenoid`, после успешного запуска контейнера c тестами в `Docker`.
-<p>Образец:</p>
 
 ----
 
@@ -142,13 +141,13 @@ allure serve tests/android/allure-results
 ![Video test](images/video-report.gif)
 
 
-### Видео прохождения mobile автотеста
+### Gif прохождения mobile автотеста
 ![autotest_gif](images/Firsttest-ezgif.com-crop.gif)
 ![autotest_gif](images/Secondtest-ezgif.com-crop.gif)
 ![autotest_gif](images/3rdtest-ezgif.com-crop.gif)
 
 
-## Отчет в Telegram
+## Отчет в Telegram (падает в случае прохождения через CI/CD Jenkins)
 После завершения сборки специальный Telegram-бот отправляет сообщение с отчетом.
 Чтобы видеть его увидеть, вступите (временно) в канал `https://t.me/allure_reports_max`
 
