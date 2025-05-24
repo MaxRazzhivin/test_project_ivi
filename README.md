@@ -152,7 +152,7 @@ allure serve tests/android/allure-results
 Чтобы видеть его увидеть, вступите (временно) в канал `https://t.me/allure_reports_max`
 
 
-![Telegram](images/message_telegram.png)
+![Telegram](images/messg_telegram.png)
 
 ## Полная статистика хранится в Allure TestOps
 
