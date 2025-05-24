@@ -87,6 +87,11 @@ poetry install
 pytest ./tests/web/
 ```
 
+#### Получение отчёта после завершения теста:
+```bash
+allure serve tests/web/allure-results
+```
+
 
 #### Для локального запуска mobile автотестов выполнить процедуру:
 
@@ -101,12 +106,11 @@ pytest ./tests/web/
 python -m venv .venv
 source .venv/bin/activate
 poetry install
-pytest ./tests/web/
+pytest ./tests/android/
 ```
 
 #### Получение отчёта:
 ```bash
-allure serve tests/web/allure-results
 allure serve tests/android/allure-results
 
 ```
