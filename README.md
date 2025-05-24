@@ -83,8 +83,8 @@
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-poetry install
-pytest ./tests/web/
+pip install -r requirements.txt
+pytest tests/web/.
 ```
 
 ### Получение отчёта после завершения теста:
@@ -105,8 +105,8 @@ allure serve tests/web/allure-results
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-poetry install
-pytest ./tests/android/
+pip install -r requirements.txt
+pytest tests/android/.
 ```
 
 ### Получение отчёта:
