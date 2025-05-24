@@ -6,8 +6,6 @@ from appium import webdriver
 from selene import browser, support
 from dotenv import load_dotenv
 
-from utils import attach
-
 load_dotenv()
 email = os.getenv('EMAIL')
 password = os.getenv('PASSWORD')
