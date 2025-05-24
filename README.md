@@ -133,15 +133,14 @@ allure serve tests/android/allure-results
 </details>
 
 ## Видео тестов
-Видеозапись каждого web-теста генерируется с помощью `Selenoid`, после успешного запуска контейнера c тестами в `Docker`. 
-<details>
+Видеозапись каждого web-теста генерируется с помощью `Selenoid`, после успешного запуска контейнера c тестами в `Docker`.
 <p>Образец:</p>
 
 ----
 
 
 ![Video test](images/video-report.gif)
-</details>
+
 
 ### Видео прохождения mobile автотеста
 ![autotest_gif](images/Firsttest-ezgif.com-crop.gif)
