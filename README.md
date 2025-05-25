@@ -147,9 +147,9 @@ allure serve tests/android/allure-results
 ![autotest_gif](images/3rdtest-ezgif.com-crop.gif)
 
 ### Gif прохождения mobile автотестов на iOS
-![autotest_gif](images/test_main_menu.gif)
-![autotest_gif](images/test_search.gif)
-![autotest_gif](images/test-authorize.gif)
+![autotest_gif](images/test_main_screen.gif)
+![autotest_gif](images/test_search_text.gif)
+![autotest_gif](images/test-authorize_user.gif)
 
 
 ## Отчет в Telegram (падает в случае прохождения через CI/CD Jenkins)
