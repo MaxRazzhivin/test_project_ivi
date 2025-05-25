@@ -1,9 +1,5 @@
 import os
-
-from appium.options.android import UiAutomator2Options
 from pydantic_settings import BaseSettings
-
-import utils
 
 
 class Config(BaseSettings):

@@ -1,30 +1,34 @@
 import os
-from datetime import time
-
-
 import pytest
-
+from allure_commons._allure import StepContext
 from appium import webdriver
 from appium.options.ios import XCUITestOptions
+from dotenv import load_dotenv
+from selene import browser, support
 
-desired_caps = dict (
+import config
 
-    deviceName = 'iPhone',
-    platformName = "iOS",
-    platformVersion = '18.4.2',
-    automationName = "XCUITest",
-    udid = '', #позже уточнить айдишник здесь
-    appPackage = "ru.ivi.client",
-    appActivity = "ru.ivi.client.activity.MainActivity"
-)
+load_dotenv()
+email = os.getenv('EMAIL')
+password = os.getenv('PASSWORD')
 
-remote_url = os.getenv('remote_url', 'http://127.0.0.1:4723/')
+desired_caps = {
+    "platformName": "ios",
+    "appium:automationName": "XCUITest",
+    "appium:udid": "00008030-0003555A0212202E",
+    "appium:bundleId": "ru.ivi",
+    "noReset": False
+}
+
+remote_url = config.remote_url
 
 @pytest.fixture(scope='function', autouse=True)
 def mobile_management():
     options = XCUITestOptions().load_capabilities(desired_caps)
-    driver = webdriver.Remote(remote_url, options=options)
+    browser.config.driver = webdriver.Remote(remote_url, options=options)
+    browser.config.timeout = float(os.getenv('timeout', '15.0'))
+    browser.config._wait_decorator = support._logging.wait_with(context=StepContext)
 
+    yield
 
-    time.sleep(5)
-    driver.quit()
+    browser.quit()
