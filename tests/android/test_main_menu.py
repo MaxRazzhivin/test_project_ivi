@@ -23,6 +23,8 @@ def test_control_buttons_should_be_visible():
     main_menu.button_favourite_should_be_visible()
     main_menu.button_profile_should_be_visible()
 
+    main_menu.header_btns_are_clickable()
+
 
 
 
@@ -38,7 +40,6 @@ def test_control_buttons_should_be_visible():
 @allure.label('layer', 'mobile')
 def test_search():
     main_menu.close_advertisement()
-
     main_menu.search_function_and_verify_result('Батя')
 
 
@@ -53,7 +54,5 @@ def test_search():
 @allure.severity('critical')
 @allure.label('layer', 'mobile')
 def test_authorization():
-
     main_menu.close_advertisement()
-
     main_menu.profile_page(email, password)

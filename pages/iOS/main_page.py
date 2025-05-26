@@ -59,15 +59,15 @@ def search_function_and_verify_result(text):
 
 def profile_page(email, password):
     with step("Test profile page, authorization"):
-        browser.element((AppiumBy.XPATH, '(//XCUIElementTypeButton[@name="TabBarButtonContainer"])[5]')).click()
+        browser.element((AppiumBy.IOS_PREDICATE, 'name == "VoiceOverElement" AND label == "Войти; вкладка"')).click()
         browser.element((AppiumBy.ACCESSIBILITY_ID, "Input")).click()
-        browser.element((AppiumBy.ACCESSIBILITY_ID, "Input")).type(str(email))
+        browser.element((AppiumBy.ACCESSIBILITY_ID, "Input")).type(email)
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Button')).click()
         try:
             browser.element((AppiumBy.IOS_PREDICATE, "name == 'VoiceOverElement' AND label == 'Ввести пароль'")).click()
         except Exception:
             pass
-        browser.element((AppiumBy.XPATH, "//XCUIElementTypeOther[@name='Input']")).type(password)
+        browser.element((AppiumBy.IOS_PREDICATE, "name == 'editbox'")).send_keys(password)
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Button')).click()
         browser.element((AppiumBy.ACCESSIBILITY_ID, "logout")).click()
         browser.element((AppiumBy.XPATH, '(//XCUIElementTypeButton[@name="VoiceOverElement"])[7]')).click()

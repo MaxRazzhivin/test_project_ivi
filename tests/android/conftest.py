@@ -21,6 +21,7 @@ desired_caps = {
     "appActivity": "ru.ivi.client.activity.MainActivity",
     "autoGrantPermissions": True,
     "udid": 'mnv4zxustsi7z9in',  # номер девайса из adb devices
+    "appium": 'noReset'
 }
 
 remote_url = config.remote_url
