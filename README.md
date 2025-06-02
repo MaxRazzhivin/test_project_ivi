@@ -11,16 +11,16 @@
 - Запуск мобильных автотестов на Андроид через Appium (локальный запуск через установленное приложение на девайсе из play market)
 
 ## Stack:
-<code><img src="images/StackIcons/python.svg" width="40" height="40" alt="Python"  title="Python" /></code>
-<code><img src="images/StackIcons/pycharm.png" width="40" height="40" alt="PyCharm" title="PyCharm"></code>
-<code><img src="images/StackIcons/pytest.png" width="40" height="40"  alt="PyTest" title="PyTest"></code>
-<code><img src="images/StackIcons/selene.png" width="40" height="40"  alt="Selene" title="Selene"></code>
-<code><img src="images/StackIcons/Allure.svg" width="40" height="40"  alt="Allure" title="Allure"></code>
-<code><img src="images/StackIcons/selenoid.png" width="40" height="40"  alt="Selenoid " title="Selenoid"></code>
-<code><img src="images/StackIcons/Jenkins.svg" width="40" height="40"  alt="Jenkins " title="Jenkins"></code>
-<code><img src="images/StackIcons/appium.png" width="40" height="40"  alt="Appium " title="Appium"></code>
-<code><img src="images/StackIcons/allure_testops.png" width="40" height="40"  alt="Testops " title="Testops"></code>
-<code><img src="images/StackIcons/Telegram.svg" width="50" height="40" alt="Telegram"  title="Telegram"></code>
+<code><img src="resources/StackIcons/python.svg" width="40" height="40" alt="Python"  title="Python" /></code>
+<code><img src="resources/StackIcons/pycharm.png" width="40" height="40" alt="PyCharm" title="PyCharm"></code>
+<code><img src="resources/StackIcons/pytest.png" width="40" height="40"  alt="PyTest" title="PyTest"></code>
+<code><img src="resources/StackIcons/selene.png" width="40" height="40"  alt="Selene" title="Selene"></code>
+<code><img src="resources/StackIcons/Allure.svg" width="40" height="40"  alt="Allure" title="Allure"></code>
+<code><img src="resources/StackIcons/selenoid.png" width="40" height="40"  alt="Selenoid " title="Selenoid"></code>
+<code><img src="resources/StackIcons/Jenkins.svg" width="40" height="40"  alt="Jenkins " title="Jenkins"></code>
+<code><img src="resources/StackIcons/appium.png" width="40" height="40"  alt="Appium " title="Appium"></code>
+<code><img src="resources/StackIcons/allure_testops.png" width="40" height="40"  alt="Testops " title="Testops"></code>
+<code><img src="resources/StackIcons/Telegram.svg" width="50" height="40" alt="Telegram"  title="Telegram"></code>
 <br>
 - Язык: `Python`
 - Для написания UI-тестов используется фреймворк `Selene`, современная «обёртка» вокруг `Selenium WebDriver`
