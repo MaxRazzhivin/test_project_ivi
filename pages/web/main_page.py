@@ -12,6 +12,12 @@ def close_cookie():
     browser.element('[data-test="accept-teaser-button"]').click()
 
 
+def favourite_button():
+    # локатор для кнопки "буду смотреть"
+    favourite_menu = browser.element('.profileMenu__list_tile .profileMenu__item:nth-child(4)')
+    return favourite_menu
+
+
 def return_to_main_page():
 
     # Возврат в главное меню
@@ -27,7 +33,7 @@ class Authorised:
         # и кнопкой "Попробовать 30 дней бесплатно"
 
         browser.element('.segmentedLanding__section_main .nbl-button__primaryText').should(
-            have.text('Попробовать 30 дней бесплатно')).click()
+            have.text('Попробовать 60 дней бесплатно')).click()
 
     def authorization(self, login, password):
 
@@ -69,7 +75,7 @@ class Authorised:
         browser.element('.nbl-avatar__text').should(be.visible).click()
 
         # Заходим в список "буду смотреть" внутри личного кабинета
-        browser.element('.profileMenu__list_tile .profileMenu__item:nth-child(4)').click()
+        favourite_button().click()
 
         # Проверяем, что фильм присутствует в списке и добавлен корректно
         (browser.element('.profileGallery .gallerySection__list > li:nth-child(1)').should

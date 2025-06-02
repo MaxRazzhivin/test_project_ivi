@@ -1,5 +1,5 @@
 # Ivi.tv
-![main page screenshot](images/main%20screen%20page.png)
+![main page screenshot](resources/main%20screen%20page.png)
 
 ## Description:
 В этом репозитории:
@@ -70,7 +70,7 @@
 
 <p>Образец:</p>
 
-<br>![Jenkins](images/jenkins-screen.png)
+<br>![Jenkins](resources/jenkins-screen.png)
 
 </details>
 
@@ -124,11 +124,11 @@ allure serve tests/android/allure-results
    <summary>Скриншоты</summary>
 
 ###### Главный экран (Overview)
-![Screen Allure1](images/allure-main-screen.png)
+![Screen Allure1](resources/allure-main-screen.png)
 ###### Страница со списком тестов (Graph)
-![Screen Allure2](images/allure-graphs.png)
+![Screen Allure2](resources/allure-graphs.png)
 ###### Пример описания теста
-![Screen Allure3](images/allure-test-suites.png)
+![Screen Allure3](resources/allure-test-suites.png)
 
 </details>
 
@@ -138,18 +138,18 @@ allure serve tests/android/allure-results
 ----
 
 
-![Video test](images/video-report.gif)
+![Video test](resources/video-report.gif)
 
 
 ### Gif прохождения mobile автотестов на Android
-![autotest_gif](images/Firsttest-ezgif.com-crop.gif)
-![autotest_gif](images/Secondtest-ezgif.com-crop.gif)
-![autotest_gif](images/3rdtest-ezgif.com-crop.gif)
+![autotest_gif](resources/Firsttest-ezgif.com-crop.gif)
+![autotest_gif](resources/Secondtest-ezgif.com-crop.gif)
+![autotest_gif](resources/3rdtest-ezgif.com-crop.gif)
 
 ### Gif прохождения mobile автотестов на iOS
-![autotest_gif](images/test_main_screen.gif)
-![autotest_gif](images/test_search_text.gif)
-![autotest_gif](images/test-authorize_user.gif)
+![autotest_gif](resources/test_main_screen.gif)
+![autotest_gif](resources/test_search_text.gif)
+![autotest_gif](resources/test-authorize_user.gif)
 
 
 ## Отчет в Telegram (падает в случае прохождения через CI/CD Jenkins)
@@ -157,7 +157,7 @@ allure serve tests/android/allure-results
 Чтобы видеть его увидеть, вступите (временно) в канал `https://t.me/allure_reports_max`
 
 
-![Telegram](images/messg_telegram.png)
+![Telegram](resources/messg_telegram.png)
 
 ## Полная статистика хранится в Allure TestOps
 
@@ -165,19 +165,19 @@ allure serve tests/android/allure-results
 
 #### Дашборд с общими показателями тестовых прогонов
 
-![This is an image](images/testops%20main%20screen.png)
+![This is an image](resources/testops%20main%20screen.png)
 
 #### История запуска тестовых наборов
 
-![This is an image](images/testops%20test%20runs.png)
+![This is an image](resources/testops%20test%20runs.png)
 
 #### Тест кейсы
 
-![This is an image](images/testops-test-suits.png)
+![This is an image](resources/testops-test-suits.png)
 
 #### Тестовые артефакты
 
-![This is an image](images/test_artefacts.png)
+![This is an image](resources/test_artefacts.png)
 
 ----
 
@@ -185,4 +185,4 @@ allure serve tests/android/allure-results
 
 > [Ссылка на проект в Jira](https://jira.autotests.cloud/browse/HOMEWORK-1430)
 
-![This is an image](images/jira%20screen.png)
+![This is an image](resources/jira%20screen.png)
